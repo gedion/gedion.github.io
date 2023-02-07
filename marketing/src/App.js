@@ -7,7 +7,7 @@ import Pricing from './components/Pricing'
 
 
 const App = () => 
-	<>
+	<div>
 		<StylesProvider>
 		<BrowserRouter>
 		  <Switch>
@@ -16,7 +16,7 @@ const App = () =>
 		  </Switch>
 		</BrowserRouter>
 		</StylesProvider>
-  </>
+  </div>
 
 
 export default App
