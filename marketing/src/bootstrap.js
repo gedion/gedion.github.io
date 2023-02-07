@@ -10,7 +10,6 @@ const mount = el =>
 
 if (process.env.NODE_ENV === 'development') {
 const devRoot = document.body.querySelector('#m_marketing-dev-root')
-	console.log('devRoot ', devRoot)
 	devRoot && mount(devRoot)
 }
 
