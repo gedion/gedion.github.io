@@ -6,20 +6,20 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const devConfig = {
   mode: 'development',
 	devServer: {
-		port: 3001,
+		port: 3002,
 	  historyApiFallback: {
 		  index: '/index.html'
-  	}
+  	},
 	},
   output: {
-    publicPath: 'http://localhost:3001/'
+    publicPath: 'http://localhost:3002/'
 	},
 	plugins: [
 		new ModuleFederationPlugin({
-		  name: 'marketing',
+		  name: 'auth',
 			filename: 'remoteEntry.js',
 			exposes: {
-				'./MarketingApp': './src/bootstrap'
+				'./AuthApp': './src/bootstrap'
 			},
 			shared: packageJson.dependencies
 		})
