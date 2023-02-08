@@ -41,7 +41,6 @@ export default () => {
 					  <DashboardLazy />
 					</Route>
 					<Route path="/" component={MarketingLazy} />
-
 				</Switch>
 				</Suspense>
 			</Router>
