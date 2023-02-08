@@ -14,6 +14,7 @@ const AuthLazy = lazy(() => import('./components/AuthApp'))
 const DashboardLazy = lazy(() => import('./components/DashboardApp'))
 
 const history = createBrowserHistory()
+
 export default () => {
 	const [isSignedIn, setIsSignedIn] = useState(false)
 
