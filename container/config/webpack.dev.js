@@ -7,7 +7,8 @@ const devConfig = {
 	devServer: {
 		port: 3000,
 	  historyApiFallback: {
-		  index: '/index.html'
+		  index: '/index.html',
+			publicPath: '/container/latest/'
   	}
 	},
   output: {
