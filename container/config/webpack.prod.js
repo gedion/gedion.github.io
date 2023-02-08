@@ -8,8 +8,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const prodConfig = {
   mode: 'production',
 	output: {
-		filename: '[name].[contenthash].js',
-		publicPath: '/container/latest/'
+		filename: '[name].[contenthash].js'
 	},
 	plugins: [
 		new ModuleFederationPlugin({

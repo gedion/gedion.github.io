@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom'
 export default ({ onSignIn }) => {
   const ref = useRef(null)
 	const history = useHistory()
+
 	useEffect(() => {
     const { onParentNavigate } = mountAuth(ref.current, {
 			initialPath: history.location.pathname,
@@ -18,5 +19,6 @@ export default ({ onSignIn }) => {
 		})
     history.listen(onParentNavigate)
 	}, [])
+
 	return <div ref={ref} />
 }
