@@ -6,6 +6,7 @@ import App from './App'
 const mount = (el, { onNavigate, defaultHistory, initialPath  } = {}) => {
   const history = defaultHistory || createMemoryHistory({ initialEntries: [initialPath]})
 	onNavigate && history.listen(onNavigate)
+	
   ReactDom.render(
 		<App history={history}/>,
 		el
