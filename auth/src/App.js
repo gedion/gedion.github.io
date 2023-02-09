@@ -5,9 +5,7 @@ import { Switch, Route, Router } from 'react-router-dom'
 import SignIn from './components/Signin'
 import SignUp from './components/Signup'
 
-const generateClassName = createGenerateClassName({
-	productionPrefix: 'au'
-})
+const generateClassName = createGenerateClassName({ productionPrefix: 'au' })
 
 const App = ({ onSignIn, history }) => 
 	<>

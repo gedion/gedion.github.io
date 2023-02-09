@@ -6,7 +6,8 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const prodConfig = {
   mode: 'production',
 	output: {
-		filename: '[name].[contenthash].js'
+		filename: '[name].[contenthash].js',
+		publicPath: '/auth/latest/'
 	},
 	plugins: [
 		new ModuleFederationPlugin({
