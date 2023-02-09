@@ -12,8 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Link } from 'react-router-dom';
 
-function Copyright() {
-  return (
+const  Copyright = () => 
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" to="/">
@@ -22,8 +21,6 @@ function Copyright() {
       {new Date().getFullYear()}
       {'.'}
     </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
