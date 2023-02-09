@@ -11,7 +11,7 @@ const generateClassName = createGenerateClassName({
 })
 
 const App = ({ history }) => 
-	<div>
+	<>
 		<StylesProvider generateClassName={generateClassName}>
 		<Router history={history}>
 		  <Switch>
@@ -20,7 +20,7 @@ const App = ({ history }) =>
 		  </Switch>
 		</Router>
 		</StylesProvider>
-  </div>
+  </>
 
 
 export default App
