@@ -2,13 +2,13 @@ const { merge } = require('webpack-merge')
 const commonConfig = require('./webpack.common')
 
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
-const prefix = process.env.PRODUCTION_DOMAIN_PREFIX
+const domain = process.env.PRODUCTION_DOMAIN
 
 const prodConfig = {
   mode: 'production',
 	output: {
 		filename: '[name].[contenthash].js',
-		publicPath: `/${prefix}/auth/latest/`
+		publicPath: `${domain}/auth/latest/`
 	},
 	plugins: [
 		new ModuleFederationPlugin({

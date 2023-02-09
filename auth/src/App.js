@@ -1,6 +1,6 @@
 import React from 'react'
-import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles'
 import { Switch, Route, Router } from 'react-router-dom'
+import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles'
 
 import SignIn from './components/Signin'
 import SignUp from './components/Signup'

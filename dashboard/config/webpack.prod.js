@@ -3,13 +3,13 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const packageJson = require('../package.json');
 const commonConfig = require('./webpack.common');
 
-const prefix = process.env.PRODUCTION_DOMAIN_PREFIX
+const domain = process.env.PRODUCTION_DOMAIN
 
 const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-		publicPath: `/${prefix}/dashboard/latest/`
+		publicPath: `${domain}/dashboard/latest/`
   },
   plugins: [
     new ModuleFederationPlugin({

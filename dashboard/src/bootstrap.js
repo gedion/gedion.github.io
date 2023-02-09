@@ -5,10 +5,7 @@ const mount = el => createApp(Dashboard).mount(el)
 
 if (process.env.NODE_ENV === 'development') {
   const devRoot = document.querySelector('#_dashboard-dev-root')
-
-  if (devRoot) {
-    mount(devRoot)
-  }
+  devRoot && mount(devRoot)
 }
 
 export { mount }

@@ -5,9 +5,9 @@ import { StylesProvider, createGenerateClassName } from '@material-ui/core/style
 
 import Header from './components/Header'
 
-const MarketingLazy = lazy(() => import('./components/MarketingApp'))
 const AuthLazy = lazy(() => import('./components/AuthApp'))
 const DashboardLazy = lazy(() => import('./components/DashboardApp'))
+const MarketingLazy = lazy(() => import('./components/MarketingApp'))
 
 const history = createBrowserHistory()
 const generateClassName = createGenerateClassName({ productionPrefix: 'ma' })
