@@ -9,7 +9,7 @@ const AuthLazy = lazy(() => import('./components/AuthApp'))
 const DashboardLazy = lazy(() => import('./components/DashboardApp'))
 const MarketingLazy = lazy(() => import('./components/MarketingApp'))
 
-const history = createBrowserHistory()
+const history = createBrowserHistory({ basename: 'mfp/container/latest/' })
 const generateClassName = createGenerateClassName({ productionPrefix: 'ma' })
 
 export default () => {
