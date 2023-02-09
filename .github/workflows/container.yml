@@ -21,6 +21,7 @@ jobs:
       - run: npm run build
         env:
           PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
+          PRODUCTION_DOMAIN_PREFIX: ${{ secrets.PRODUCTION_DOMAIN_PREFIX }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

@@ -5,13 +5,12 @@ import { StylesProvider, createGenerateClassName } from '@material-ui/core/style
 
 import Header from './components/Header'
 
-const generateClassName = createGenerateClassName({ productionPrefix: 'ma' })
-
 const MarketingLazy = lazy(() => import('./components/MarketingApp'))
 const AuthLazy = lazy(() => import('./components/AuthApp'))
 const DashboardLazy = lazy(() => import('./components/DashboardApp'))
 
 const history = createBrowserHistory()
+const generateClassName = createGenerateClassName({ productionPrefix: 'ma' })
 
 export default () => {
 	const [isSignedIn, setIsSignedIn] = useState(false)

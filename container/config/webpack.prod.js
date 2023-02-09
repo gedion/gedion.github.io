@@ -3,13 +3,14 @@ const commonConfig = require('./webpack.common')
 const packageJson = require('../package.json')
 
 const domain = process.env.PRODUCTION_DOMAIN
+const prefix = process.env.PRODUCTION_DOMAIN_PREFIX
 
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
 const prodConfig = {
   mode: 'production',
 	output: {
 		filename: '[name].[contenthash].js',
-		publicPath: '/container/latest/'
+		publicPath: `${prefix}/container/latest/`
 	},
 	plugins: [
 		new ModuleFederationPlugin({

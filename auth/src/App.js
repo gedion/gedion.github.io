@@ -7,7 +7,7 @@ import SignUp from './components/Signup'
 
 const generateClassName = createGenerateClassName({ productionPrefix: 'au' })
 
-const App = ({ onSignIn, history }) => 
+export default ({ onSignIn, history }) => 
 	<>
 		<StylesProvider generateClassName={generateClassName}>
 		<Router history={history}>
@@ -22,6 +22,3 @@ const App = ({ onSignIn, history }) =>
 		</Router>
 		</StylesProvider>
   </>
-
-
-export default App
